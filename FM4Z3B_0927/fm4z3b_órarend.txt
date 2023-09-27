@@ -1,0 +1,13 @@
+<FM4Z3B_órarend>
+	<óra>
+		<Kurzusnév></Kurzusnév>
+		<oktató></oktató>
+		<idõpont>
+			<kezdet = "">
+			<vég = "">
+			<nap = "">	
+		</idõpont>
+		<hely></hely>
+		<szak></szak>
+	</óra>
+</FM4Z3B_órarend>

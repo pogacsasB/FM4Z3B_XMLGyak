@@ -1,0 +1,16 @@
+<konferencia>
+    <cím></cím>
+    <hallgatók>
+        <hallgató>
+            <név>
+            <lakcím>
+        </hallgató>
+    </hallgatók>
+    <helyszín></helyszín>
+    <előadó>
+        <név>
+        <adószám>
+        <lakcím>
+    </előadó>
+    <dátum></dátum>
+</konferencia>

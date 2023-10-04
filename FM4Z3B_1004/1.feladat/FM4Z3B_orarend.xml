@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orarend>
+	<ora>
+		<Kurzusnev></Kurzusnev>
+		<oktato></oktato>
+		<idopont>
+			<kezdet = "">
+			<veg = "">
+			<nap = "">	
+		</idopont>
+		<hely></hely>
+		<szak></szak>
+	</ora>
+</orarend>

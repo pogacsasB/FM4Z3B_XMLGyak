@@ -1,0 +1,12 @@
+
+
+<!DOCTYPE orarend SYSTEM "FM4Z3B_orarend.xml">
+    <!ELEMENT orarend (Kurzusnev, oktato, idopont, hely, szak)>
+        <!ELEMENT Kurzusnev>
+        <!ELEMENT oktato>
+        <!ELEMENT idopont>
+            <!ELEMENT kezdet (#PCDATA)>
+            <!ELEMENT veg (#PCDATA)>
+            <!ATTLIST nap>
+        <!ELEMENT hely>
+        <!ELEMENT szak>

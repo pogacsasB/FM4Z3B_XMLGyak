@@ -1,0 +1,21 @@
+
+<!DOCTYPE FM4Z3B_modell SYSTEM "FM4Z3B_ertodtd.dtd">
+    
+<!ELEMENT FM4Z3B_modell (A, B, C, c)>
+    <!ELEMENT A (a, b)>
+        <!ELEMENT a ID #REQUIRED>
+        <!ELEMENT b (x, y)>
+            <!ELEMENT x>
+            <!ELEMENT y>
+        <!ELEMENT c (d, e)>
+            <!ELEMENT d>
+            <!ELEMENT e>
+    <!ELEMENT B (a, b)>
+        <!ELEMENT a ID #REQUIRED>
+        <!ELEMENT b (x, y)>
+            <!ELEMENT x>
+            <!ELEMENT y>
+    <!ELEMENT C (a, b)>
+        <!ELEMENT a ID #REQUIRED>
+        <!ELEMENT b>
+    <!ELEMENT c>

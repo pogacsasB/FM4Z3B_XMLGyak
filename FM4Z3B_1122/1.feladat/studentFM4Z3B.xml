@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<studentFM4Z3B xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+        xs:noNamespaceSchemaLocation="studentFM4Z3B.xsd">
+
+    <class>
+
+        <student id="1">
+            <keresztnev>Virág</keresztnev>
+            <vezeteknev>Cserepes</vezeteknev>
+            <becenev>Virág</becenev>
+            <kor>21</kor>
+        </student>
+
+        <student id="2">
+            <keresztnev>Béla</keresztnev>
+            <vezeteknev>Vastag</vezeteknev>
+            <becenev>Béla</becenev>
+            <kor>22</kor>
+        </student>
+
+        <student id="3">
+            <keresztnev>János</keresztnev>
+            <vezeteknev>Juhász</vezeteknev>
+            <becenev>Jani</becenev>
+            <kor>20</kor>
+        </student>
+
+
+    </class>
+
+</studentFM4Z3B>

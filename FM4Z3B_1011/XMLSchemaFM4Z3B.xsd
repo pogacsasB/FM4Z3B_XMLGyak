@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <!-- Egyszerű típusok - Felépítése -->
+
+	<xs:element name="vendeglatas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="etterem" type="etteremTipus" maxOccurs="unbounded"/>
+                <xs:element name="foszakacs" type="foszakacsTipus" maxOccurs="unbounded"/>
+                <xs:element name="szakacs" type="szakacsTipus" maxOccurs="unbounded"/>
+                <xs:element name="gyakornok" type="gyakornokTipus" maxOccurs="unbounded"/>
+                <xs:element name="vendeg" type="vendegTipus" maxOccurs="unbounded"/>
+                <xs:element name="rendeles" type="rendelesTipus" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+
+        <!-- Kulcsok -->
+
+        <xs:key name="etterem_kulcs">
+            <xs:selector xpath="etterem"/>
+            <xs:field xpath="@ekod"/>
+        </xs:key>
+
+        <xs:key name="foszakacs_kulcs">
+            <xs:selector xpath="foszakacs"/>
+            <xs:field xpath="@fkod"/>
+        </xs:key>
+
+        <xs:key name="szakacs_kulcs">
+            <xs:selector xpath="szakacs"/>
+            <xs:field xpath="@szkod"/>
+        </xs:key>
+
+        <xs:key name="gyakornok_kulcs">
+            <xs:selector xpath="gyakornok"/>
+            <xs:field xpath="@gykod"/>
+        </xs:key>
+
+        <xs:key name="vendeg_kulcs">
+            <xs:selector xpath="vendeg"/>
+            <xs:field xpath="@vkod"/>
+        </xs:key>
+
+	</xs:element>
+
+
+</xs:schema>

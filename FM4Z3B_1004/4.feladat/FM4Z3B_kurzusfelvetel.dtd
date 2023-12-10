@@ -1,22 +1,13 @@
 <!DOCTYPE FM4Z3B_kurzusfelvetel SYSTEM "FM4Z3B_kurzusfelvetel.dtd">
     
 <!ELEMENT kurzusfelvetel (hallgato, kurzusok)>
-    <!ELEMENT hallgato (a, b)>
+    <!ELEMENT hallgato (hnev, szulev, szak)>
         <!ELEMENT hnev>
         <!ELEMENT szulev>
         <!ELEMENT szak>
-        <!ELEMENT b (x, y)>
-            <!ELEMENT x>
-            <!ELEMENT y>
-        <!ELEMENT c (d, e)>
-            <!ELEMENT d>
-            <!ELEMENT e>
-    <!ELEMENT B (a, b)>
-        <!ELEMENT a ID #REQUIRED>
-        <!ELEMENT b (x, y)>
-            <!ELEMENT x>
-            <!ELEMENT y>
-    <!ELEMENT C (a, b)>
-        <!ELEMENT a ID #REQUIRED>
-        <!ELEMENT b>
-    <!ELEMENT c>
+    <!ELEMENT kurzusok (kurzusnev, kredit, hely, idopont, oktato)>
+        <!ELEMENT kurzusnev>
+        <!ELEMENT kredit>
+        <!ELEMENT hely>
+        <!ELEMENT idopont>
+        <!ELEMENT oktato>

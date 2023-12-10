@@ -13,7 +13,7 @@ public class JsonWriteFM4Z3B {
 		
         employeeDetails.put("nev", "Pogacsas Benedek");
         employeeDetails.put("neptunkod", "FM4Z3B");
-        employeeDetails.put("szak", "GEIK");
+        employeeDetails.put("szak", "GEI");
         
         JSONArray employeeList = new JSONArray();
         employeeList.add(employeeDetails);

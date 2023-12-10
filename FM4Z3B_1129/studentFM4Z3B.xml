@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type = "text/xsl" href= "studentFM4Z3B.xsl"?>
+
+<class>
+	<student id="01">
+		<keresztnev>Pogácsás</keresztnev>
+		<vezeteknev>Benedek</vezeteknev>
+		 <becenev>Beni</becenev>
+		 <kor>22</kor>
+		 <osztondij>0</osztondij>
+	</student>
+	
+	<student id="02">
+		<keresztnev>Cserepes</keresztnev>
+		<vezeteknev>Virág</vezeteknev>
+		 <becenev>Cserép</becenev>
+		 <kor>21</kor>
+		 <osztondij>20000</osztondij>
+	</student>
+	
+	<student id="03">
+		<keresztnev>Vastag</keresztnev>
+		<vezeteknev>Sándor</vezeteknev>
+		 <becenev>Sala</becenev>
+		 <kor>23</kor>
+		 <osztondij>50000</osztondij>
+	</student>
+</class>

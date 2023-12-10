@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FM4Z3B_kurzusfelvetel xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+        xs:noNamespaceSchemaLocation="FM4Z3B_kurzusfelvetel.xsd">
+
+    <kurzusfelvetel>
+
+        <hallgato tanev="2023/24 I." egyetem="ME">
+            <hnev>Pogácsás Benedek</hnev>
+            <szulev>2001</szulev>
+            <szak>mérnökinformatikus</szak>
+        </hallgato>
+
+        <kurzusok>
+            
+            <kurzus id="" nyelv="magyar">
+                <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+                <kredit>5</kredit>
+                <hely>A1 XXXII magasfsz.</hely>
+                <idopont>Kedd 12</idopont>
+                <oktato>Dr. Bednarik László</oktato>   
+            </kurzus>
+
+            <kurzus id="" jovahagyas="igen">
+                <kurzusnev>WEB technológiák</kurzusnev>
+                <kredit>5</kredit>
+                <hely>A1 XXX. 3. em.</hely>
+                <idopont>Hétfő 14</idopont>
+                <oktato>Agárdi Anita</oktato>   
+            </kurzus>
+
+            <kurzus id="">
+                <kurzusnev>WEB alkalmazások(Java)</kurzusnev>
+                <kredit>5</kredit>
+                <hely>In I. em. 102</hely>
+                <idopont>Kedd 14</idopont>
+                <oktato>Semleci Viktor</oktato>   
+            </kurzus>
+
+            <kurzus id="" nyelv="magyar">
+                <kurzusnev>Elektro-technika elektronika</kurzusnev>
+                <kredit>5</kredit>
+                <hely>A4 III. fsz.</hely>
+                <idopont></idopont>
+                <oktato>Szabó Norbert</oktato>   
+            </kurzus>
+
+            <kurzus id="" jovahagyas="nem">
+                <kurzusnev>Fizika II.</kurzusnev>
+                <kredit>4</kredit>
+                <hely>A1 XXX. 3. em.</hely>
+                <idopont>Hétfő 8</idopont>
+                <oktato>Pszota Gábor</oktato>   
+            </kurzus>
+
+            <kurzus id="">
+                <kurzusnev>Mesterséges intelligencia</kurzusnev>
+                <kredit>5</kredit>
+                <hely>A1 XXXII magasfsz.</hely>
+                <idopont>Kedd 10</idopont>
+                <oktato>Kunné Dr Tamás Judit</oktato>   
+            </kurzus>
+
+            <kurzus id="" jovahagyas="igen">
+                <kurzusnev>Szoftvertesztelés</kurzusnev>
+                <kredit>5</kredit>
+                <hely>In I. em. 103</hely>
+                <idopont>Hétfő 10</idopont>
+                <oktato>Dr. Hornyák Olivér</oktato>   
+            </kurzus>
+        </kurzusok>
+
+    </kurzusfelvetel>
+
+</FM4Z3B_kurzusfelvetel>

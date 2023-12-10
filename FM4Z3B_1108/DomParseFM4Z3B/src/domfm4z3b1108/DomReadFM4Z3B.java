@@ -9,20 +9,44 @@ import org.w3c.dom.Node;
 
 
 public class DomReadFM4Z3B {
-	public DomReadFM4Z3B() {
-	}
 	
 	public static void main(String[] args) {
-		DomReadFM4Z3B prog = new DomReadFM4Z3B();
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		
-		
-	}
+        	try {
+            		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            		DocumentBuilder builder = factory.newDocumentBuilder();
+            		Document document = builder.parse("kurzusfelvetelFM4Z3B.xml");
+
+            		document.getDocumentElement().normalize();
+
+            		Node root = document.getDocumentElement();
+            
+            		System.out.println("Root Element: " + root.getNodeName());
+
+            		printNodes(root.getChildNodes(), 1);
+
+        	} catch (Exception e) {
+            		e.printStackTrace();
+        	}
+    	}
 	
-	public void query1(Document dom) {
-		Node root = dom.getDocumentElement();
-		System.out.println(root);
-	}
+	private static void printNodes(NodeList nodeList, int level) {
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
 
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                String nodeName = node.getNodeName();
+                String nodeValue = node.getNodeValue();
 
+                StringBuilder indent = new StringBuilder();
+                for (int j = 0; j < level; j++) {
+                    indent.append("  ");
+                }
+
+                System.out.println(indent + nodeName + ": " + nodeValue);
+
+                if (node.hasChildNodes()) {
+                    printNodes(node.getChildNodes(), level + 1);
+                }
+            }
+        }
 }

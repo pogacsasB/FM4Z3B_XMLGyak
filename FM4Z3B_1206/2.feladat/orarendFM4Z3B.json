@@ -1,0 +1,56 @@
+{
+    "FM4Z3B_orarend": {
+
+        "orak": [
+            {
+                "kurzusnev": "Adatkezelés XML-ben", 
+                "kredit": 5,
+                "hely": "A1 XXXII magasfsz.",
+                "idopont": "Kedd 12",
+                "oktato": "Dr. Bednarik László"
+            },
+
+            {
+                "kurzusnev": "WEB technológiák", 
+                "kredit": 5,
+                "hely": "A1 XXX. 3. em.",
+                "idopont": "Hétfő 14",
+                "oktato": "Agárdi Anita"
+            },
+
+            {
+                "kurzusnev": "WEB alkalmazások(Java)", 
+                "kredit": 5,
+                "hely": "In I. em. 102",
+                "idopont": "Kedd 14",
+                "oktato": "Semleci Viktor"
+            },
+
+            {
+                "kurzusnev": "Fizika II.", 
+                "kredit": 4,
+                "hely": "A1 XXX. 3. em.",
+                "idopont": "Hétfő 8",
+                "oktato": "Pszota Gábor"
+            },
+
+            {
+                "kurzusnev": "Szoftvertesztelés", 
+                "kredit": 5,
+                "hely": "In I. em. 103",
+                "idopont": "Hétfő 10",
+                "oktato": "Dr. Hornyák Olivér"
+            },
+
+            {
+                "kurzusnev": "Mesterséges intelligencia", 
+                "kredit": 5,
+                "hely": "A1 XXXII magasfsz.",
+                "idopont": "Kedd 10",
+                "oktato": "Kunné Dr Tamás Judit"
+            }
+        ]
+
+    }
+    
+}

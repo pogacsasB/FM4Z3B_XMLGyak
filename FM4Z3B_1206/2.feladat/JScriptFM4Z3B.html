@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Órarend - JavaScript</h1>
+<p id="json"></p>
+
+<script>
+const txt = '{"FM4Z3B_orarend": {"orak": [{"kurzusnev": "Adatkezelés XML-ben", "kredit": 5,"hely": "A1 XXXII magasfsz.","idopont": "Kedd 12","oktato": "Dr. Bednarik László"},{"kurzusnev": "WEB technológiák", "kredit": 5,"hely": "A1 XXX. 3. em.","idopont": "Hétfő 14","oktato": "Agárdi Anita"},{"kurzusnev": "Fizika II.", "kredit": 4,"hely": "A1 XXX. 3. em.","idopont": "Hétfő 8","oktato": "Pszota Gábor"}]}  }'
+const obj = JSON.parse(txt);
+console.log(obj);
+document.getElementById("json").innerHTML = "Kurzusnev: " + obj.FM4Z3B_orarend.orak[0].kurzusnev +"<br/>Kredit: " + obj.FM4Z3B_orarend.orak[0].kredit +"<br/>Hely: " + obj.FM4Z3B_orarend.orak[0].hely+"<br/>Idopont: " + obj.FM4Z3B_orarend.orak[0].idopont+"<br/>Oktato: " + obj.FM4Z3B_orarend.orak[0].oktato +"<br/><br/>" +
+                                            "Kurzusnev: " + obj.FM4Z3B_orarend.orak[1].kurzusnev +"<br/>Kredit: " + obj.FM4Z3B_orarend.orak[1].kredit +"<br/>Hely: " + obj.FM4Z3B_orarend.orak[1].hely+"<br/>Idopont: " + obj.FM4Z3B_orarend.orak[1].idopont+"<br/>Oktato: " + obj.FM4Z3B_orarend.orak[1].oktato +"<br/><br/>" +
+                                            "Kurzusnev: " + obj.FM4Z3B_orarend.orak[2].kurzusnev +"<br/>Kredit: " + obj.FM4Z3B_orarend.orak[2].kredit +"<br/>Hely: " + obj.FM4Z3B_orarend.orak[2].hely+"<br/>Idopont: " + obj.FM4Z3B_orarend.orak[2].idopont+"<br/>Oktato: " + obj.FM4Z3B_orarend.orak[2].oktato +"<br/>"
+</script>

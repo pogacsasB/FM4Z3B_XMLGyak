@@ -37,11 +37,9 @@ public class JsonWriteFM4Z3B {
             ora.put("ora", orak);
             JSONObject.put("FM4Z3B_orarend", ora);
 
-            FileWriter file = new FileWriter("orarendFM4Z3B1.json");
-            file.write(JSONObject.toString());
-            file.close();
-
-
+            FileWriter url = new FileWriter("orarendFM4Z3B1.json");
+            url.write(JSONObject.toString());
+            url.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <!--Egyszerű típusok-->
+    
+    <xs:element name="max_rakomany_szam" type="xs:int"/>
+    <xs:element name="sulyterheles" type="xs:int"/>
+    <xs:element name="marka" type="xs:string"/>
+    <xs:element name="suly" type="xs:int"/>
+    <xs:element name="nev" type="xs:string"/>
+    <xs:element name="nemzetiseg" type="xs:string"/>
+    <xs:element name="szuletesi_datum" type="xs:string"/>
+    <xs:element name="indulasi_ido" type="xs:string"/>
+    <xs:element name="erkezesi_ido" type="xs:string"/>
+    <xs:element name="uthossz" type="xs:int"/>
+    <xs:element name="indulasi_kikoto" type="xs:string"/>
+    <xs:element name="erkezesi_kikoto" type="xs:string"/>
+    <xs:element name="varos" type="xs:string"/>
+    <xs:element name="orszag" type="xs:string"/>
+    <xs:element name="hajo_ferohely" type="xs:int"/>
+
+    <xs:element name="textil_termek" type="xs:textil_termek_tipus"/>
+    <xs:element name="etel_alapanyag" type="xs:etel_alapanyag_tipus"/>
+    <xs:element name="jarmu" type="xs:jarmu_tipus"/>
+
+    <!--Saját típusok-->
+
+    <xs:simpleType name="textil_termekTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ruhák"/>
+            <xs:enumeration value="szőnyekeg"/>
+            <xs:enumeration value="bútor huzatok"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="etel_alapanyagTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="zöldségek"/>
+            <xs:enumeration value="gyümölcsök"/>
+            <xs:enumeration value="tejtermékek"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="jarmuTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="autók"/>
+            <xs:enumeration value="motorok"/>
+            <xs:enumeration value="motorcsónakok"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <!--Komplex típusok-->
+
+    <xs:complexType name="hajoTipus">
+        <xs:sequence>
+            <xs:element ref="max_rakomany_szam" maxOccurs="1"/>
+            <xs:element ref="sulyterheles" maxOccurs="1"/>
+            <xs:element ref="marka" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="hajo_id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="kapitanyTipus">
+        <xs:sequence>
+            <xs:element ref="nev" maxOccurs="1"/>
+            <xs:element ref="nemzetiseg" maxOccurs="1"/>
+            <xs:element ref="szuletesi_datum" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="kapitany_id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="rakomanyTipus">
+        <xs:sequence>
+            <xs:element name="tipus"/>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="textil_termek" maxOccurs="1"/>
+                        <xs:element ref="etel_alapanyag" maxOccurs="unbounded"/>
+                        <xs:element ref="jarmu" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="suly" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="rakomany_id" type="xs:int" use="required"/>
+        <xs:attribute name="hajo" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="utTipus">
+        <xs:sequence>
+            <xs:element ref="uthossz" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="ut_id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="kikotoTipus">
+        <xs:sequence>
+            <xs:element name="tipus"/>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="varos" maxOccurs="1"/>
+                        <xs:element ref="orszag" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="hajo_ferohely" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="kikoto_id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="megtett_utTipus">
+        <xs:sequence>
+            <xs:element ref="indulasi_ido" maxOccurs="1"/>
+            <xs:element ref="erkezesi_ido" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="ut_id" type="xs:int" use="required"/>
+        <xs:attribute name="hajo_id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ut_kikotoiTipus">
+        <xs:sequence>
+            <xs:element ref="indulasi_kikoto" maxOccurs="1"/>
+            <xs:element ref="erkezesi_kikoto" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="ut_id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <!--Gyökérelem elemei-->
+
+    <xs:element name="Hajo_Rakomany_XML">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Hajo" type="hajoTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Kapitany" type="kapitanyTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Rakomany" type="rakomanyTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Ut" type="utTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Kikoto" type="kikotoTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Megtett_Ut" type="megtett_ut" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Ut_Kikotoi" type="ut_kikotoi" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:sequence>
+
+    <!--Elsődleges kulcsok-->
+
+        <xs:key name="Hajo_kod">
+            <xs:selector xpath="Hajo"/>
+            <xs:field xpath="@hajo_kod"/>
+        </xs:key>
+
+        <xs:key name="Kapitany_kod">
+            <xs:selector xpath="Kapitany"/>
+            <xs:field xpath="@kapitany_kod"/>
+        </xs:key>
+
+        <xs:key name="Rakomany_kod">
+            <xs:selector xpath="Rakomany"/>
+            <xs:field xpath="@rakomany_kod"/>
+        </xs:key>
+
+        <xs:key name="Ut_kod">
+            <xs:selector xpath="Ut"/>
+            <xs:field xpath="@ut_kod"/>
+        </xs:key>
+
+        <xs:key name="Kikoto_kod">
+            <xs:selector xpath="Kikoto"/>
+            <xs:field xpath="@kikoto_kod"/>
+        </xs:key>
+    
+    <!--Idegen kulcsok-->
+
+        <xs:keyref name="R_H_kod" refer="Hajo_kod">
+            <xs:selector xpath="Rakomany"/>
+            <xs:field xpath="@hajo"/>
+        </xs:keyref>
+
+        <xs:keyref name="MU_H_kod" refer="Hajo_kod">
+            <xs:selector xpath="Megtett_Ut"/>
+            <xs:field xpath="@hajo"/>
+        </xs:keyref>
+
+        <xs:keyref name="MU_U_kod" refer="Ut_kod">
+            <xs:selector xpath="Megtett_Ut"/>
+            <xs:field xpath="@ut"/>
+        </xs:keyref>
+
+        <xs:keyref name="UK_U_kod" refer="Ut_kod">
+            <xs:selector xpath="Ut_Kikotoi"/>
+            <xs:field xpath="@fkut_id"/>
+        </xs:keyref>
+
+        <xs:keyref name="UK_KI_kod" refer="Kikoto_id">
+            <xs:selector xpath="Ut_Kikotoi"/>
+            <xs:field xpath="indulasi_kikoto"/>
+        </xs:keyref>
+
+        <xs:keyref name="UK_KE_kod" refer="Kikoto_id">
+            <xs:selector xpath="Ut_Kikotoi"/>
+            <xs:field xpath="erkezesi_kikoto"/>
+        </xs:keyref>
+
+    <!--1:1 Kapcsolat-->
+
+        <xs:keyref name="Hajo_Kapitanya">
+            <xs:selector xpath="Hajo"/>
+            <xs:field xpath="@kapitany"/>
+        </xs:keyref>
+
+</xs:schema>

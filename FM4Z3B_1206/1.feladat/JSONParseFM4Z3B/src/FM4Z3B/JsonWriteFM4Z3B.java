@@ -27,10 +27,10 @@ public class JsonWriteFM4Z3B {
                 JSONObject a = (JSONObject) orak.get(i);
                 System.out.println("\n"+ (i + 1) + ". Óra:");
                 System.out.println("Kurzusnév: " + a.get("kurzusnev"));
-				System.out.println("Kredit: " + a.get("kredit"));
-				System.out.println("Hely: " + a.get("hely"));
-				System.out.println("Időpont: " + a.get("idopont"));
-				System.out.println("Oktató: " + a.get("oktato"));
+		System.out.println("Kredit: " + a.get("kredit"));
+		System.out.println("Hely: " + a.get("hely"));
+		System.out.println("Időpont: " + a.get("idopont"));
+		System.out.println("Oktató: " + a.get("oktato"));
             }
 
             JSONObject ora = new JSONObject();
